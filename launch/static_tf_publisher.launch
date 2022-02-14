@@ -1,0 +1,3 @@
+<launch>
+<node pkg="tf" type="static_tf_cam_publisher.py" name="static_tf_cam_publisher"/>
+</launch>
