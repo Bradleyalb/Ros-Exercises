@@ -4,9 +4,9 @@ import random
 from std_msgs.msg import Float32
 
 def talker():
-  pub = rospy.Publisher('my_random_float', Float32)
+  pub = rospy.Publisher('my_random_float', Float32, queue_size=10)
   rospy.init_node('talker', anonymous=True)
-  rate = rospy.Rate(22)
+  rate = rospy.Rate(20)
 
   while not rospy.is_shutdown():
     random_number = random.random()*10
